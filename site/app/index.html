@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>MildGuide</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="..\node_modules\bootstrap\dist\css\bootstrap.min.css">
+
+    <script src="..\node_modules\jquery\dist\jquery.js"></script>
+    <script src="..\node_modules\bootstrap\dist\js\bootstrap.min.js"></script>
+
+    <script src="..\node_modules\angular\angular.js"></script>
+    <script src="..\node_modules\angular-route\angular-route.js"></script>
+
+    <script src="app.js"></script>
+
+</head>
+<body ng-app="myApp">
+
+
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#!home" style="margin-left:20px">MildGuide</a>
+        <a class="navbar-brand center-block">Effective and efficient IT consultancy <span
+                class="glyphicon glyphicon-ok"></span>
+        </a>
+
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav navbar-right" style="margin-right:10px;">
+
+            <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                   aria-expanded="false">Services <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                    <li class="dropdown-header"><strong>Automation</strong></li>
+                    <li><a>CI/CD</a></li>
+                    <li><a>Infra automation</a></li>
+                    <li><a>Test automations</a></li>
+                    <li><a>Monitoring automations</a></li>
+
+                    <li role="separator" class="divider"></li>
+                    <li class="dropdown-header"><strong>Cybersecurity</strong></li>
+                    <li><a>Vulnerabiliy Scanning</a></li>
+                    <li><a>Pentesting</a></li>
+                    <li><a>Attack Modelling</a></li>
+                    <li><a>Hardenning</a></li>
+                    <li><a>Container security</a></li>
+
+                    <li role="separator" class="divider"></li>
+                    <li class="dropdown-header"><strong>DevSecOps</strong></li>
+                    <li><a>DevSecOps Architecture</a></li>
+                    <li><a>Security Automation</a></li>
+                    <li><a>Security Pipeline</a></li>
+                    <li role="separator" class="divider"></li>
+                    <li class="dropdown-header"><strong>Cloud</strong></li>
+                    <li><a>AWS</a></li>
+                    <li><a>Azuree</a></li>
+                    <li><a>GCP</a></li>
+                    <li role="separator" class="divider"></li>
+                    <li class="dropdown-header"><strong>Development & PM</strong></li>
+                    <li><a>Project management</a></li>
+                    <li><a>Application developemnt</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                   aria-expanded="false">Technologies <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                    <li class="dropdown-header"><strong>Automation</strong></li>
+                    <li><a>Ansible</a></li>
+                    <li><a>Cloudformation</a></li>
+                    <li><a>Terraform</a></li>
+                    <li><a>Jenkins</a></li>
+                    <li><a>Docker</a></li>
+                    <li><a>Serverless</a></li>
+
+                    <li role="separator" class="divider"></li>
+                    <li class="dropdown-header"><strong>Cybersecurity</strong></li>
+                    <li><a>Vulnerability Scanning</a></li>
+                    <li><a>Compliance Check</a></li>
+                    <li role="separator" class="divider"></li>
+                    <li class="dropdown-header"><strong>DevSecOps</strong></li>
+                    <li><a>Chef Inspec</a></li>
+                    <li><a>OWASP Zap</a></li>
+                    <li><a>SAST</a></li>
+                    <li><a>DAST</a></li>
+
+                </ul>
+            </li>
+            <li><a data-toggle="modal" data-target="#myModal" href="">Career</a></li>
+
+            <li><a href="#!contact">Contact Us </a></li>
+        </ul>
+    </div><!-- /.navbar-collapse -->
+</nav> <!-- navbar-->
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title text-center">Want to grow with us?</h4>
+            </div>
+            <div class="modal-body text-center">
+                <p>It's simple, just email us your CV, your interest and plans and let's do it!</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div ng-view></div>
+
+
+<footer style="margin-left:20px; margin-right:20px">
+    <p class="pull-right"><a href="#">Back to top</a></p>
+    <p>&copy; 2020 MildGuide Corp.</p>
+</footer>
+
+</body>
+</html>
