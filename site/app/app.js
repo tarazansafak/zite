@@ -1,4 +1,9 @@
 var app = angular.module("myApp", ["ngRoute"]);
+
+
+
+
+
 app.config(function($routeProvider) {
     $routeProvider
     .when("/", {
@@ -27,5 +32,9 @@ app.config(function($routeProvider) {
         templateUrl : "views/contact.html",
         controller : "controllers/contactCtrl"
     });
+});
+app.controller("controllers/homeCtrl", function ($scope) {
+});
+app.controller("controllers/contactCtrl", function ($scope) {
 });
 

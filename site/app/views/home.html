@@ -57,9 +57,10 @@
         </div>
         <div class="col-sm-6">
             <h1 class="text-center">
-                <img class="img-rectangular center-block" src="images/deer.png" style="margin-top:-75px" width="65" height="65"></img>
+                <img class="img-rectangular center-block" src="images/deer.png" style="margin-top:-75px" width="65"
+                     height="65"></img>
                 <!--        <span class="glyphicon glyphicon-ok"></span>-->
-                With our experiences we guide startups, small/mid size companies in their IT journey.
+                With our experiences, we guide startups, small/mid size companies in their IT journey.
             </h1></div>
         <div class="col-sm-3">
         </div>
@@ -291,7 +292,7 @@
 
 
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
-<div class="team-area sp" style="margin-top:50px">
+<div class="team-area sp" style="margin-top:50px;margin-bottom:-100px">
     <div class="row" style="margin-top:-50px;margin-bottom:20px">
         <div class="col-sm-4">
         </div>
@@ -443,268 +444,240 @@
         </div>
     </div>
 </div>
-<div>
+
+<div ng-include src="'views/contact.html'"></div>
 
 
-    <div>
-        <div class="panel-body" style="margin-top=-30px">
-            <div class="panel-body text-center">
-                <h4>
-                    Contact Us for Inquiry</h4>
+<style>
+    .timeline {
+        list-style: none;
+        padding: 20px 0 20px;
+        position: relative;
+    }
 
-                <div>
-              <span
-                      class="glyphicon glyphicon-envelope"></span> <a href="mailto:SpikeGuide@gmail.com">SpikeGuide@gmail.com<a/><br/>
-                </div>
-                <br/>
-                <h4>Address</h4>
-                <div>
-                    Lõõtsa
-                    11415, Ülemiste City, Tallin, ESTONIA
-                    <br/>
-                </div>
+    .timeline:before {
+        top: 0;
+        bottom: 0;
+        position: absolute;
+        content: " ";
+        width: 3px;
+        background-color: #eeeeee;
+        left: 50%;
+        margin-left: -1.5px;
+    }
 
-            </div>
-            <!--Google map-->
-            <div id="map-container-google-2" class="z-depth-1-half map-container"
-                 style="height: 500px; margin-top:25px">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2029.6758844044512!2d24.797930116335014!3d59.42180138169128!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4692eb55d55f3afb%3A0x102b6ddb991c33d6!2s%C3%9Clemiste%20City!5e0!3m2!1sen!2see!4v1601041527168!5m2!1sen!2see"
-                        width="100%" height="400" frameborder="0" style="border:0;" allowfullscreen=""
-                        aria-hidden="false"
-                        tabindex="0"></iframe>
-            </div>
-        </div>
+    .timeline > li {
+        margin-bottom: 20px;
+        position: relative;
+    }
 
-        <style>
-            .timeline {
-                list-style: none;
-                padding: 20px 0 20px;
-                position: relative;
-            }
+    .timeline > li:before,
+    .timeline > li:after {
+        content: " ";
+        display: table;
+    }
 
-            .timeline:before {
-                top: 0;
-                bottom: 0;
-                position: absolute;
-                content: " ";
-                width: 3px;
-                background-color: #eeeeee;
-                left: 50%;
-                margin-left: -1.5px;
-            }
+    .timeline > li:after {
+        clear: both;
+    }
 
-            .timeline > li {
-                margin-bottom: 20px;
-                position: relative;
-            }
+    .timeline > li:before,
+    .timeline > li:after {
+        content: " ";
+        display: table;
+    }
 
-            .timeline > li:before,
-            .timeline > li:after {
-                content: " ";
-                display: table;
-            }
+    .timeline > li:after {
+        clear: both;
+    }
 
-            .timeline > li:after {
-                clear: both;
-            }
+    .timeline > li > .timeline-panel {
+        width: 50%;
+        float: left;
+        border: 1px solid #d4d4d4;
+        border-radius: 2px;
+        padding: 20px;
+        position: relative;
+        -webkit-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
+        box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
+    }
 
-            .timeline > li:before,
-            .timeline > li:after {
-                content: " ";
-                display: table;
-            }
+    .timeline > li.timeline-inverted + li:not(.timeline-inverted),
+    .timeline > li:not(.timeline-inverted) + li.timeline-inverted {
+        margin-top: -60px;
+    }
 
-            .timeline > li:after {
-                clear: both;
-            }
+    .timeline > li:not(.timeline-inverted) {
+        padding-right: 90px;
+    }
 
-            .timeline > li > .timeline-panel {
-                width: 50%;
-                float: left;
-                border: 1px solid #d4d4d4;
-                border-radius: 2px;
-                padding: 20px;
-                position: relative;
-                -webkit-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
-                box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
-            }
+    .timeline > li.timeline-inverted {
+        padding-left: 90px;
+    }
 
-            .timeline > li.timeline-inverted + li:not(.timeline-inverted),
-            .timeline > li:not(.timeline-inverted) + li.timeline-inverted {
-                margin-top: -60px;
-            }
+    .timeline > li > .timeline-panel:before {
+        position: absolute;
+        top: 26px;
+        right: -15px;
+        display: inline-block;
+        border-top: 15px solid transparent;
+        border-left: 15px solid #ccc;
+        border-right: 0 solid #ccc;
+        border-bottom: 15px solid transparent;
+        content: " ";
+    }
 
-            .timeline > li:not(.timeline-inverted) {
-                padding-right: 90px;
-            }
+    .timeline > li > .timeline-panel:after {
+        position: absolute;
+        top: 27px;
+        right: -14px;
+        display: inline-block;
+        border-top: 14px solid transparent;
+        border-left: 14px solid #fff;
+        border-right: 0 solid #fff;
+        border-bottom: 14px solid transparent;
+        content: " ";
+    }
 
-            .timeline > li.timeline-inverted {
-                padding-left: 90px;
-            }
+    .timeline > li > .timeline-badge {
+        color: #fff;
+        width: 50px;
+        height: 50px;
+        line-height: 50px;
+        font-size: 1.4em;
+        text-align: center;
+        position: absolute;
+        top: 16px;
+        left: 50%;
+        margin-left: -25px;
+        background-color: #999999;
+        z-index: 100;
+        border-top-right-radius: 50%;
+        border-top-left-radius: 50%;
+        border-bottom-right-radius: 50%;
+        border-bottom-left-radius: 50%;
+    }
 
-            .timeline > li > .timeline-panel:before {
-                position: absolute;
-                top: 26px;
-                right: -15px;
-                display: inline-block;
-                border-top: 15px solid transparent;
-                border-left: 15px solid #ccc;
-                border-right: 0 solid #ccc;
-                border-bottom: 15px solid transparent;
-                content: " ";
-            }
+    .timeline > li.timeline-inverted > .timeline-panel {
+        float: right;
+    }
 
-            .timeline > li > .timeline-panel:after {
-                position: absolute;
-                top: 27px;
-                right: -14px;
-                display: inline-block;
-                border-top: 14px solid transparent;
-                border-left: 14px solid #fff;
-                border-right: 0 solid #fff;
-                border-bottom: 14px solid transparent;
-                content: " ";
-            }
+    .timeline > li.timeline-inverted > .timeline-panel:before {
+        border-left-width: 0;
+        border-right-width: 15px;
+        left: -15px;
+        right: auto;
+    }
 
-            .timeline > li > .timeline-badge {
-                color: #fff;
-                width: 50px;
-                height: 50px;
-                line-height: 50px;
-                font-size: 1.4em;
-                text-align: center;
-                position: absolute;
-                top: 16px;
-                left: 50%;
-                margin-left: -25px;
-                background-color: #999999;
-                z-index: 100;
-                border-top-right-radius: 50%;
-                border-top-left-radius: 50%;
-                border-bottom-right-radius: 50%;
-                border-bottom-left-radius: 50%;
-            }
+    .timeline > li.timeline-inverted > .timeline-panel:after {
+        border-left-width: 0;
+        border-right-width: 14px;
+        left: -14px;
+        right: auto;
+    }
 
-            .timeline > li.timeline-inverted > .timeline-panel {
-                float: right;
-            }
+    .timeline-badge.primary {
+        background-color: #2e6da4 !important;
+    }
 
-            .timeline > li.timeline-inverted > .timeline-panel:before {
-                border-left-width: 0;
-                border-right-width: 15px;
-                left: -15px;
-                right: auto;
-            }
+    .timeline-badge.success {
+        background-color: #3f903f !important;
+    }
 
-            .timeline > li.timeline-inverted > .timeline-panel:after {
-                border-left-width: 0;
-                border-right-width: 14px;
-                left: -14px;
-                right: auto;
-            }
+    .timeline-badge.warning {
+        background-color: #f0ad4e !important;
+    }
 
-            .timeline-badge.primary {
-                background-color: #2e6da4 !important;
-            }
+    .timeline-badge.danger {
+        background-color: #d9534f !important;
+    }
 
-            .timeline-badge.success {
-                background-color: #3f903f !important;
-            }
+    .timeline-badge.info {
+        background-color: #5bc0de !important;
+    }
 
-            .timeline-badge.warning {
-                background-color: #f0ad4e !important;
-            }
+    .timeline-title {
+        margin-top: 0;
+        color: inherit;
+    }
 
-            .timeline-badge.danger {
-                background-color: #d9534f !important;
-            }
+    .timeline-body > p,
+    .timeline-body > ul {
+        margin-bottom: 0;
+    }
 
-            .timeline-badge.info {
-                background-color: #5bc0de !important;
-            }
-
-            .timeline-title {
-                margin-top: 0;
-                color: inherit;
-            }
-
-            .timeline-body > p,
-            .timeline-body > ul {
-                margin-bottom: 0;
-            }
-
-            .timeline-body > p + p {
-                margin-top: 5px;
-            }
+    .timeline-body > p + p {
+        margin-top: 5px;
+    }
 
 
-            body {
-                margin-top: 20px;
-            }
+    body {
+        margin-top: 20px;
+    }
 
-            .single-team .inner {
-                text-align: center;
-                margin-bottom: 35px;
-                border: 1px solid #e5eaf0;
-                padding: 5px 5px 0px;
-            }
+    .single-team .inner {
+        text-align: center;
+        margin-bottom: 35px;
+        border: 1px solid #e5eaf0;
+        padding: 5px 5px 0px;
+    }
 
-            .single-team .inner .team-img {
-                position: relative;
-            }
+    .single-team .inner .team-img {
+        position: relative;
+    }
 
-            .single-team .inner .team-img img {
-                width: 100%;
-            }
+    .single-team .inner .team-img img {
+        width: 100%;
+    }
 
-            .single-team .inner .team-img::after {
-                content: "";
-                position: absolute;
-                width: 100%;
-                height: 100%;
-                top: 0;
-                left: 0;
-                opacity: 0;
-            }
+    .single-team .inner .team-img::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        opacity: 0;
+    }
 
-            .single-team .inner .team-img:hover::after {
-                opacity: 0.4;
-            }
+    .single-team .inner .team-img:hover::after {
+        opacity: 0.4;
+    }
 
-            .single-team .inner .team-content {
-                padding: 22px 0px 0px;
-            }
+    .single-team .inner .team-content {
+        padding: 22px 0px 0px;
+    }
 
-            .single-team .inner .team-content h4 {
-                font-size: 18px;
-                font-weight: 400;
-            }
+    .single-team .inner .team-content h4 {
+        font-size: 18px;
+        font-weight: 400;
+    }
 
-            .single-team .inner .team-content h5 {
-                font-weight: 300;
-                font-size: 16px;
-                letter-spacing: 0.5px;
-                color: #7d91aa;
-            }
+    .single-team .inner .team-content h5 {
+        font-weight: 300;
+        font-size: 16px;
+        letter-spacing: 0.5px;
+        color: #7d91aa;
+    }
 
-            .single-team .inner .team-content a {
-                display: inline-block;
-                padding: 2px;
-                margin: 0 3px;
-                font-size: 16px;
-            }
+    .single-team .inner .team-content a {
+        display: inline-block;
+        padding: 2px;
+        margin: 0 3px;
+        font-size: 16px;
+    }
 
-            .team-social {
-                background: #f3f6fa;
-                width: 50%;
-                padding-top: 4px;
-                margin: auto;
-                border-radius: 15px 15px 0px 0px;
-                margin-top: 17px;
-            }
+    .team-social {
+        background: #f3f6fa;
+        width: 50%;
+        padding-top: 4px;
+        margin: auto;
+        border-radius: 15px 15px 0px 0px;
+        margin-top: 17px;
+    }
 
 
-        </style>
+</style>
 
 
 
