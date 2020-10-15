@@ -4,7 +4,7 @@
     <title>SpikeGuide</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="..\node_modules\bootstrap\dist\css\font-awesome.css">
+    <link rel="stylesheet" type="text/css" href="..\node_modules\bootstrap\dist\css\font-awesome.css">
     <link rel="stylesheet" href="..\node_modules\bootstrap\dist\css\bootstrap.min.css">
 
     <link rel="icon" href="images/deer.png" type="image/gif" sizes="16x16">
@@ -22,7 +22,7 @@
     <script type='text/javascript'>
 
         $(document).ready(function () {
-            $("a").on('click', function (event) {
+            $("#contactus").on('click', function (event) {
                 if (this.hash !== "") {
                     event.preventDefault();
                     var hash = this.hash;
@@ -35,6 +35,9 @@
             });
         });
 
+        $('.navbar-nav>li>a').on('click', function () {
+            $('.navbar-collapse').collapse('hide');
+        });
 
     </script>
 
@@ -94,6 +97,9 @@
                     <li class="dropdown-header"><strong>Development & PM</strong></li>
                     <li><a>Project management</a></li>
                     <li><a>Application developemnt</a></li>
+                    <li role="separator" class="divider"></li>
+                    <li class="dropdown-header"><strong>Human Resourcing</strong></li>
+                    <li><a>Telant selection</a></li>
                 </ul>
             </li>
             <li class="dropdown">
@@ -126,12 +132,14 @@
                    aria-expanded="false">Products <span class="caret"></span></a>
                 <ul class="dropdown-menu">
                     <li class="dropdown-header"><strong>Automation</strong></li>
-                    <li><a>SpikeSite</a></li>
+                    <li><a href="#!spikesite">CorpSeed</a></li>
                 </ul>
             </li>
             <li><a data-toggle="modal" data-target="#myModal" href="">Career</a></li>
 
-            <li><a href="#contact-us">Contact Us </a></li>
+            <!--            <li><a class="nav-link" href="#contact-us" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" >Contact Us </a></li>-->
+            <li><a id="contactus" href="#contact-us">Contact Us </a></li>
+
         </ul>
     </div><!-- /.navbar-collapse -->
 </nav> <!-- navbar-->
@@ -149,7 +157,8 @@
             <div class="modal-body text-center">
                 <p>It's simple, just email us your CV, your interest and plans and let's do it!</p>
 
-                <span class="glyphicon glyphicon-envelope"></span> <a href="mailto:info@spikeguide.com"> info@spikeguide.com</a>
+                <span class="glyphicon glyphicon-envelope"></span> <a href="mailto:info@spikeguide.com">
+                info@spikeguide.com</a>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
