@@ -28,6 +28,12 @@ app.config(function ($routeProvider) {
     }).when("/spikesite", {
         templateUrl: "views/spikesite.html",
         controller: "controllers/spikesiteCtrl"
+    }).when("/expert", {
+        templateUrl: "views/expert.html",
+        controller: "controllers/expertCtrl"
+    }).when("/phishaa", {
+        templateUrl: "views/phishaa.html",
+        controller: "controllers/phishaaCtrl"
     }).when("/contact", {
         templateUrl: "views/contact.html",
         controller: "controllers/contactCtrl"
@@ -40,6 +46,10 @@ app.controller("controllers/contactCtrl", function ($scope) {
 });
 
 app.controller("controllers/spikesiteCtrl", function ($scope) {
+});
+app.controller("controllers/expertCtrl", function ($scope) {
+});
+app.controller("controllers/phishaaCtrl", function ($scope) {
 });
 
 
