@@ -50,37 +50,131 @@
 <!--    </a>-->
 <!--</div>&lt;!&ndash; myCarousel &ndash;&gt;-->
 <head>
-    <link rel="stylesheet" href="..\node_modules\bootstrap\dist\css\font-awesome.css">
+    <link rel="stylesheet" type="text/css" href="..\node_modules\bootstrap\dist\css\font-awesome.css">
+
+
+    <script>
+        var language;
+
+
+        // localStorage.setItem('language', 'es')
+
+        function setLanguage(lang) {
+            localStorage.setItem('language', lang);
+            // window.open("https://www.w3schools.com");
+
+        }
+
+        getLanguage();
+
+        function getLanguage() {
+            (localStorage.getItem('language') == null) ? localStorage.setItem('language', 'tr') : false;
+            $.ajax({
+                url: localStorage.getItem('language') + '.json',
+                dataType: 'json', async: false, dataType: 'json',
+                success: function (lang) {
+                    language = lang
+                }
+            });
+        }
+
+        // localStorage.setItem('language', 'tr')
+
+
+        $(document).ready(function () {
+            $('#div1').text(language.date);
+            $('#homeSlogan').text(language.homeSlogan);
+            $('#homeSloganItem1').text(language.homeSloganItem1);
+            $('#homeSloganItem2').text(language.homeSloganItem2);
+            $('#homeSloganItem3').text(language.homeSloganItem3);
+
+            $('#homeCompany1').text(language.homeCompany1);
+            $('#homeCompanyDetails1').text(language.homeCompanyDetails1);
+            $('#homeCompany2').text(language.homeCompany2);
+            $('#homeCompanyDetails2').text(language.homeCompanyDetails2);
+            $('#homeCompany3').text(language.homeCompany3);
+            $('#homeCompanyDetails3').text(language.homeCompanyDetails3);
+
+            $('#homeCaption1').text(language.homeCaption1);
+            $('#homeCaptionDetails1').text(language.homeCaptionDetails1);
+
+            $('#homeTL1').text(language.homeTL1);
+            $('#homeTL2').text(language.homeTL2);
+            $('#homeTL3').text(language.homeTL3);
+            $('#homeTL4').text(language.homeTL4);
+
+            $('#homeTL41').text(language.homeTL41);
+            $('#homeTL42').text(language.homeTL42);
+            $('#homeTL43').text(language.homeTL43);
+            $('#homeTL44').text(language.homeTL44);
+            $('#homeTL45').text(language.homeTL45);
+
+            $('#homeTeamTitle').text(language.homeTeamTitle);
+
+            $('#contactInquiry').text(language.contactInquiry);
+
+            $('#navSlogan').text(language.navSlogan);
+
+            $('#navD1').text(language.navD1);
+            $('#navD2').text(language.navD2);
+            $('#navD3').text(language.navD3);
+            $('#navD4').text(language.navD4);
+            $('#navD5').text(language.navD5);
+
+
+        });
+
+    </script>
 
 </head>
+
 
 <div class="container col-xs-12" style="margin-top:150px; margin-bottom:75px;">
     <div class="row">
         <div class="col-sm-3">
         </div>
         <div class="col-sm-6">
-            <h1 class="text-center">
-                <img class="img-rectangular center-block" src="images/deer.png" style="margin-top:-75px" width="65"
-                     height="65"></img>
+            <img class="img-rectangular center-block" src="images/deer.png" style="margin-top:-75px" width="65"
+                 height="65"></img>
+            <h1 class="text-center" id="homeSlogan">
                 <!--        <span class="glyphicon glyphicon-ok"></span>-->
                 With our experiences, we guide startups, small/mid size companies in their IT journey.
             </h1></div>
         <div class="col-sm-3">
         </div>
     </div>
+
+
+    <!--    <a href="#" onclick="setLanguage('en')">English</a>-->
+    <!--    <a href="#" onclick="setLanguage('tr')">Turkish</a>-->
+    <!--    <div id="div1">naber</div>-->
+
+
     <div class="row" style="margin-top:5px">
         <div class="col-sm-4">
         </div>
         <div class="col-sm-5">
             <h4 class="text-center-left">
                 <!--        <span class="glyphicon glyphicon-ok"></span>-->
-                <span class="glyphicon glyphicon-ok"/> Save money & time </br>
-                <span class="glyphicon glyphicon-ok"/> Get a custom tailed trainings & solutions </br>
+                <span class="glyphicon glyphicon-ok"/><span id="homeSloganItem1">
+                    Save money & time
+                </span>
+                </br>
+
+                <span class="glyphicon glyphicon-ok"/><span id="homeSloganItem2">
+                    Get a custom tailed trainings & solutions
+                </span>
+                </br>
                 <!--                <span class="glyphicon glyphicon-ok"/> Have future proof solutions </br>-->
-                <span class="glyphicon glyphicon-ok"/> Secure & run your business without headacke </br>
+
+                <span class="glyphicon glyphicon-ok"/><span id="homeSloganItem3">Secure & run your business without
+                    headacke
+                </span>
+                </br>
                 <!--                <span class="glyphicon glyphicon-ok"/> Better focus on your ideas </br>-->
                 <!--                <span class="glyphicon glyphicon-ok"/> Focus & run your business without headacke </br>-->
-            </h4></div>
+            </h4>
+        </div>
         <div class="col-sm-4">
         </div>
     </div>
@@ -112,11 +206,11 @@
                     <img class="img-rectangular center-block" src="images/entre.png"
                          alt="Generic placeholder image"
                          width="300" height="170">
-                    <h3 class="text-center">Entrepreneurs</h3>
-                    <p class="text-center" style="font-size:15px;font-family:Arial">You have a business plan but IT is
+                    <h3 class="text-center"><span id="homeCompany1">Entrepreneurs</span></h3>
+                    <p class="text-center" style="font-size:15px;font-family:Arial"><span id="homeCompanyDetails1">You have a business plan but IT is
                         not your strongest suit and you don't know
                         how to create your
-                        application and take it to production? We will get it done for you!</p>
+                        application and take it to production? We will get it done for you!</span></p>
 
                     <!--                    <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>-->
                 </div><!-- /.col-lg-4 -->
@@ -126,11 +220,11 @@
                     <img class="img-rectangular center-block" src="images/startup.jpg"
                          alt="Generic placeholder image"
                          width="300" height="170">
-                    <h3 class="text-center">Startups</h3>
-                    <p class="text-center" style="font-size:15px;font-family:Arial">You have a somewhat working solution
+                    <h3 class="text-center"><span id="homeCompany2">Startups</span></h3>
+                    <p class="text-center" style="font-size:15px;font-family:Arial"><span id="homeCompanyDetails2">You have a somewhat working solution
                         and you want to mature your processess
                         and have scalable,
-                        secure & realiable solution? We will help you to get here! </p>
+                        secure & realiable solution? We will help you to get here! </span></p>
                     <!--                    <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>-->
                 </div><!-- /.col-lg-4 -->
             </div>
@@ -139,11 +233,11 @@
                     <img class="img-rectangular center-block" src="images/mid.jpg" alt="Generic placeholder image"
                          width="300"
                          height="170">
-                    <h3 class="text-center">Midsized companies</h3>
-                    <p class="text-center" style="font-size:15px;font-family:Arial">You have limited resources and time
+                    <h3 class="text-center"><span id="homeCompany3">Midsized companies</span></h3>
+                    <p class="text-center" style="font-size:15px;font-family:Arial"><span id="homeCompanyDetails3">You have limited resources and time
                         to learn and implement all these cool
                         stuff? We will accelare
-                        you with our know-how and best practices!</p>
+                        you with our know-how and best practices!</span></p>
                     <!--                    <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>-->
                 </div><!-- /.col-lg-4 -->
             </div>
@@ -164,12 +258,13 @@
                 </div>
                 <div class="col-sm-4">
                     <h2 class="text-center">
+                        <span id="homeCaption1">
                         HOW DO WE WORK?
-
-
+                        </span>
                     </h2>
-                    <h4 class="text-center"><span class="glyphicon glyphicon-eur"> </span> Initial consultation is free
-                        of charge!
+                    <h4 class="text-center"><span class="glyphicon glyphicon-eur"> </span> <span
+                            id="homeCaptionDetails1">Initial consultation is free
+                        of charge!</span>
                     </h4>
                     <h4 class="text-center"><span class="glyphicon glyphicon-chevron-down"> </span></h4>
 
@@ -195,9 +290,8 @@
                     <div class="timeline-body text-center">
                         <br>
 
-                        <h4>
-                            1- We meet and evalutate your
-                            requirements.
+                        <h4 id="homeTL1">
+                            1- We meet and evalutate your requirements.
                         </h4>
 
                         </br>
@@ -216,9 +310,7 @@
                     </div>
                     <div class="timeline-body text-center">
                         </br>
-                        <p>  <h4>2- We craft the best solution for you with our experts
-                        and peers
-                        in the sector</h4></p>
+                        <p>  <h4 id="homeTL2">2- We craft the best solution for you with our experts and peers in the sector</h4></p>
 
                         </br>
                         <!--                        <h4 class="text-center"><span class="glyphicon glyphicon-ok"> </span> Free!-->
@@ -236,12 +328,12 @@
                     <div class="timeline-body text-center">
                         </br>
                         <p>
-                        <h4>3- We present you the custom tailored solution using the cutting edge
+                        <h4 id="homeTL3">3- We present you the custom tailored solution using the cutting edge
                             technolgy with the estimated budget and effort</h4>
                         </p>
                         </br>
 
-                        <h4 class="text-center"><span class="glyphicon glyphicon-ok"> </span> Fixed price!
+                        <h4 class="text-center"><span class="glyphicon glyphicon-ok"> </span> <span id ="homeTL44" >Fixed price! </span>
                         </h4>
                         <!--                        <hr>-->
                         <!--                        <div class="btn-group">-->
@@ -269,17 +361,17 @@
                     <div class="timeline-body">
 
 
-                        <h4 class="text-center"><br class="text-center">You have the control in this stage;</br></br>
+                        <h4 class="text-center"><br class="text-center" id="homeTL4">You have the control in this stage;</br></br>
                         </h4>
 
 
-                        <h4><span class="glyphicon glyphicon-ok"/> We can assign short/long term experts </br>
-                            <span class="glyphicon glyphicon-ok"/> We do project management and guidence </br>
-                            <span class="glyphicon glyphicon-ok"/> Implement complete solution & handover </br>
+                        <h4><span class="glyphicon glyphicon-ok"/> <span id="homeTL41">We can assign short/long term experts</span>  </br>
+                            <span class="glyphicon glyphicon-ok"/> <span id="homeTL42">We do project management and guidence</span> </br>
+                            <span class="glyphicon glyphicon-ok"/> <span id="homeTL43">Implement complete solution & handover</span> </br>
                         </h4>
 
                         </br>
-                        <h4 class="text-center"><span class="glyphicon glyphicon-ok"> </span> Custom offer!
+                        <h4 class="text-center"><span class="glyphicon glyphicon-ok"> </span> <span id="homeTL45">Custom offer!</span>
 
                     </div>
                 </div>
@@ -294,13 +386,14 @@
 </div>
 
 
-<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" type="text/css"
+      rel="stylesheet">
 <div class="team-area sp" style="margin-top:50px;margin-bottom:-100px">
     <div class="row" style="margin-top:-50px;margin-bottom:20px">
         <div class="col-sm-4">
         </div>
         <div class="col-sm-4">
-            <h2 class="text-center">
+            <h2 class="text-center" id="homeTeamTitle">
                 MEET THE EXCEPTIONAL TEAM
             </h2>
         </div>
@@ -350,7 +443,7 @@
                         <img src="https://bootdey.com/img/Content/avatar/avatar2.png" alt="Member Photo">
                     </div>
                     <div class="team-content">
-                        <h4>MSc. Olcay</h4>
+                        <h4>MSc. Olley</h4>
                         <h5>Sr. Solution Architect</h5>
                         <span class="glyphicon glyphicon-ok"/> Enterprise solutions architect</br>
                         <!--                        <div class="team-social">-->

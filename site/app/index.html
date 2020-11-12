@@ -33,11 +33,24 @@
                     });
                 }
             });
+
+
+            $("#myModal").on('show.bs.modal', function () {
+
+
+                $('#careerTitle').text(language.careerTitle);
+                $('#careerTitleDetail').text(language.careerTitleDetail);
+
+
+            });
         });
 
         $('.navbar-nav>li>a').on('click', function () {
             $('.navbar-collapse').collapse('hide');
+
+
         });
+
 
     </script>
 
@@ -55,7 +68,7 @@
             <span class="icon-bar"></span>
         </button>
         <a class="navbar-brand" href="#" style="margin-left:20px">SpikeGuide</a>
-        <a class="navbar-brand center-block">Effective and efficient IT consultancy <span
+        <a class="navbar-brand center-block"><span id="navSlogan">Effective and efficient IT consultancy</span> <span
                 class="glyphicon glyphicon-ok"></span>
         </a>
 
@@ -67,7 +80,7 @@
 
             <li class="dropdown">
                 <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-                   aria-expanded="false">Services <span class="caret"></span></a>
+                   aria-expanded="false"><span id="navD1">Services </span><span class="caret"></span></a>
                 <ul class="dropdown-menu">
                     <li class="dropdown-header"><strong>Automation</strong></li>
                     <li><a>CI/CD</a></li>
@@ -77,10 +90,10 @@
 
                     <li role="separator" class="divider"></li>
                     <li class="dropdown-header"><strong>Cybersecurity</strong></li>
-                    <li><a>Vulnerabiliy Scanning</a></li>
+                    <li><a>Vulnerability Scanning</a></li>
                     <li><a>Pentesting</a></li>
                     <li><a>Attack Modelling</a></li>
-                    <li><a>Hardenning</a></li>
+                    <li><a>Hardening</a></li>
                     <li><a>Container security</a></li>
 
                     <li role="separator" class="divider"></li>
@@ -104,7 +117,7 @@
             </li>
             <li class="dropdown">
                 <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-                   aria-expanded="false">Technologies <span class="caret"></span></a>
+                   aria-expanded="false"><span id="navD2">Technologies </span><span class="caret"></span></a>
                 <ul class="dropdown-menu">
                     <li class="dropdown-header"><strong>Automation</strong></li>
                     <li><a>Ansible</a></li>
@@ -129,7 +142,7 @@
             </li>
             <li class="dropdown">
                 <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-                   aria-expanded="false">Products <span class="caret"></span></a>
+                   aria-expanded="false"><span id="navD3"> Products</span> <span class="caret"></span></a>
                 <ul class="dropdown-menu">
                     <li class="dropdown-header"><strong>Automation</strong></li>
                     <li><a href="#!spikesite">CorpSeed</a></li>
@@ -139,27 +152,60 @@
                     <li><a href="#!phishaa">Phishaa</a></li>
                 </ul>
             </li>
-            <li><a data-toggle="modal" data-target="#myModal" href="">Career</a></li>
+            <li><a data-toggle="modal" data-target="#myModal" href=""><span id="navD4">Career</span></a></li>
 
             <!--            <li><a class="nav-link" href="#contact-us" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" >Contact Us </a></li>-->
-            <li><a id="contactus" href="#contact-us">Contact Us </a></li>
+            <li><a id="contactus" href="#contact-us"><span id="navD5">Contact Us</span> </a></li>
+
+            <li class="dropdown language-selector">
+                <a class="dropdown-toggle" data-toggle="dropdown" data-close-others="true">
+                    <img src="images\en.png" width="16" height="16"/>
+                </a>
+                <ul class="dropdown-menu pull-right">
+                    <li>
+                        <a href="#" onclick="setLanguage('en')">
+                            <img src="images\en.png" width="16" height="16"/>
+                            <span>English</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" onclick="setLanguage('tr')">
+                            <img src="images\trr.png" width="17" height="17"/>
+                            <span>Turkish</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="images\ru.png" width="16" height="16"/>
+                            <span>Russian</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="images\ee.png" width="16" height="16"/>
+                            <span>Estonian</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+
 
         </ul>
     </div><!-- /.navbar-collapse -->
-</nav> <!-- navbar-->
-
-<!-- Modal -->
+</nav> <!-- navbar--> -->
 <div class="modal fade" id="myModal" role="dialog">
     <div class="modal-dialog">
+
 
         <!-- Modal content-->
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <h4 class="modal-title text-center">Want to grow with us?</h4>
+                <h4 class="modal-title text-center" id="careerTitle">Want to grow with us?</h4>
             </div>
             <div class="modal-body text-center">
-                <p>It's simple, just email us your CV, your interest and plans and let's do it!</p>
+                <p><span id="careerTitleDetail">It's simple, just email us your CV, your interest and plans and let's do it!</span>
+                </p>
 
                 <span class="glyphicon glyphicon-envelope"></span> <a href="mailto:info@spikeguide.com">
                 info@spikeguide.com</a>

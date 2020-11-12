@@ -11,7 +11,7 @@ app.config(function ($routeProvider) {
             templateUrl: "views/home.html",
             controller: "controllers/homeCtrl"
         }).when("/services", {
-        templateUrl: "views/services.html",
+        templateUrl: "services.html",
         controller: "controllers/servicesCtrl"
     }).when("/automation", {
         templateUrl: "views/automation.html",
