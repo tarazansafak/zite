@@ -8,7 +8,7 @@
   "navD4": "Kariyer",
   "navD5": "Bize ulaşın",
 
-  "careerTitle": "Bizimle gelişmeye hazır mısın?",
+  "careerTitle": "İş ya da staj olanakları ile bizimle gelişmeye hazır mısın?",
   "careerTitleDetail": "Çok kolay, bize CV'ni gönder ve hemen görüşelim!",
 
   "homeSlogan": "Tecrübelerimiz ile sizlere IT sektöründe danışmanlık desteği sağlıyoruz",
@@ -41,7 +41,7 @@
 
   "contactInquiry": "Daha fazla bilgi için bize ulaşın",
 
-  "product0": "Bir şirket açıcaksınız fakat websitesi, alan adı, mail sistemi gibi detaylarla zaman kaybet istemiyor musunuz?",
+  "product0": "Estonyada bir şirket açıcaksınız fakat websitesi, alan adı, mail sistemi, yasal süreç gibi detaylarla zaman kaybet istemiyor musunuz?",
   "product1": "CorpSeed çözümü sizin için!",
 
   "product11": "Sirket alan adı",
@@ -72,7 +72,7 @@
   "product32": " Otomatik IOCs zenginleştirme",
   "product33": " Çoklu Phising mail raporlama kanalları",
 
-  "product3P": "Fiyat için iletişime geçiniz",
+  "product3P": "Fiyat için iletişime geçiniz"
 
 
 
@@ -88,8 +88,5 @@
 
 
 
-
-
-  "date": "Tarih"
 
 }
