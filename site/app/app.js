@@ -37,6 +37,9 @@ app.config(function ($routeProvider) {
     }).when("/contact", {
         templateUrl: "views/contact.html",
         controller: "controllers/contactCtrl"
+    }).when("/course1", {
+        templateUrl: "views/course1.html",
+        controller: "controllers/course1Ctrl"
     });
 
 });
@@ -51,5 +54,8 @@ app.controller("controllers/expertCtrl", function ($scope) {
 });
 app.controller("controllers/phishaaCtrl", function ($scope) {
 });
+app.controller("controllers/course1Ctrl", function ($scope) {
+});
+
 
 
